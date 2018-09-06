@@ -5,3 +5,5 @@
 **2 - créer le fichier ".gitignore" pour empêchez de pousser les fichiers ou dossier qui n'en ont pas besoin**
 
 **3 - allez dans " https://expressjs.com/en/starter/installing.html " pour installer express**
+
+**4 - Commençons le projet**

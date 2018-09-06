@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDo list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gerez vos toDos</h1>
+        </header>
+        <div class="corps">
+            <section class="saisie">
+                    <input id="todo" value="" type="text" placeholder="Vos todo ...">
+                    <button type="button" id="valider">Valider</button>
+            </section>
+            <section class="erreur">
+                <p></p>
+            </section>
+            <section class="liste">
+                <h3>Liste des toDos</h3>
+                <div class="liste-li">
+                    <ul id="list" class="liste-ul">
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <section>&copy; Fenitra - fin Août 2018</section>
+            <section class="r-sociaux">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+            </section>
+        </footer>
+    </div>
+    
+    <script src="addTodo.js"></script>
+    <script src="todo.js"></script>
+    <script src="liste.js"></script>
+    <script src="deleteTodo.js"></script>
+    <script>
+        const todo = new Todo("#todo");
+        const buttonvalider = new Addtodo('#valider');
+        const list = new Liste("#list", "li");
+        buttonvalider.setInput(todo);
+        buttonvalider.insertList(list);
+        todo.addTodo(buttonvalider);
+        if(new DeleteTodo('#suppr')){
+            const deleteItem = new DeleteTodo('#suppr');
+            deleteItem.insertList(list);
+            deleteItem.delete();
+        }
+    </script>
+</body>
+</html>
