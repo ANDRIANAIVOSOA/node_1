@@ -8,6 +8,7 @@ class Addtodo {
     add(){
         if(this.input.get() !== ""){
             this.list.insert(this.input.get());
+            this.list.save();
             this.input.vider();
             //console.log(this.list.getList());
         }

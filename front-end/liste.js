@@ -22,7 +22,7 @@ class Liste {
             id: id
         });
         deleteButton.setIndex(id);
-        this.save();
+        //this.save();
         this.ul.appendChild(listeJson);
     }
 
@@ -54,6 +54,7 @@ class Liste {
                     restore.forEach(element => {
                         this.insert(element.nom);
                     });
+                    this.save();
                 }
                 console.log(response);
             })
@@ -64,6 +65,7 @@ class Liste {
                     tabRestore.forEach(element => {
                         this.insert(element.content);
                     });
+                    this.save();
                 }
             })
         

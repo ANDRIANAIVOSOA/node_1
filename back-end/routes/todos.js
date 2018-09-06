@@ -4,17 +4,17 @@ const db = require('../db');
 
 Router.get('/', function(req, res, next) {
     try {
-        console.log(1);
+        //console.log(1);
         db.query('SELECT * FROM todo', function (error, results, fields) {
-            console.log(2);
+            //console.log(2);
             if (error) throw error;
-            setTimeout(() => {
+            //setTimeout(() => {
                 res.send(results);
-                console.log(3);
-            },30000);
-            console.log(4);
+                console.log(results);
+            //},5000);
+            //console.log(4);
         });
-        console.log(5);
+        //console.log(5);
     } catch(e) {
         console.log(e)
     }
