@@ -45,10 +45,8 @@ class Liste {
 
     restore() {
         fetch('http://localhost:4200/')
-            .then(function(response){
-                return response.json();
-            })
-            .then((response) => {
+            .then(response => response.json())
+            .then(response => {
                 const restore = response
                 if(restore){
                     restore.forEach(element => {
