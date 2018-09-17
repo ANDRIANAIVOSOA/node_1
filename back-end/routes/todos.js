@@ -3,19 +3,22 @@ const Router = Express.Router();
 const db = require('../db');
 const todoModel = require('../repository/todoModel');
 
-Router.get('/', function(req, res, next) {
-    try {
+Router.get('/', async function(req, res, next) {
+    try {/*
         todoModel.list()
             .then(resolv => {
                 res.send(resolv);
             })
             .catch(err => {
                 res.status(500).send('Erreur');
-            });
+            });*/
+        const resolve = await todoModel.list();
+        res.send(resolve);
     } catch(e) {
         console.log(e)
     }
 });
+
 
 Router.post('/', function(req, res, next) {
     try {

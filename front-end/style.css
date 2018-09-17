@@ -30,14 +30,16 @@ header {
     border-radius: 6px;
 }
 .liste-li{
-    
     overflow:auto;
     max-height: 423px;
 }
 .liste-li *{
     margin-right: 5px;
 }
-
+.liste-ul {
+    width: 50%;
+    text-align: right;
+}
 .liste-ul undefined{
     width: 100%;
     display: block;
